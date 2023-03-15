@@ -8,7 +8,7 @@ public class BST extends INode {
         return a;
     }
 
-    //1. Creating node to insert new subnodes to binary tree
+   // Creating node to insert new subnodes to binary tree
 
     public INode insert(INode node, int k) {
         if (node == null) {
@@ -22,8 +22,27 @@ public class BST extends INode {
         return node;
 
     }
+    // Method to search for a given key value
 
- // 2. Method for printing the Binary Tree
+    public INode search(INode node, int key) {
+
+        // Base Cases: root is null or key is present at root
+        if (node == null || node.data == key) {
+            System.out.println(node.data + " is present in the Tree");
+            return node;
+        } else {
+            // Key is greater than root's key
+            if (node.data < key) {
+                return search(node.right, key);
+            } else {
+                // Key is smaller than root's key
+                return search(node.left, key);
+            }
+        }
+    }
+
+  // 3. Method for printing the Binary Tree
+
     public void printBST(INode node) {
         if (node == null) {
             return;

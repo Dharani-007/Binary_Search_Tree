@@ -1,6 +1,6 @@
 public class BST extends INode {
 
-     public INode createNewNode(int k) {
+    public INode createNewNode(int k) {
         INode a = new INode();
         a.data = k;
         a.left = null;
@@ -8,7 +8,7 @@ public class BST extends INode {
         return a;
     }
 
-     // 1. Creating new node if there is no Binary Tree exists
+    //1. Creating node to insert new subnodes to binary tree
 
     public INode insert(INode node, int k) {
         if (node == null) {
@@ -23,8 +23,7 @@ public class BST extends INode {
 
     }
 
-  // 2. Method for printing the Binary Tree
-
+ // 2. Method for printing the Binary Tree
     public void printBST(INode node) {
         if (node == null) {
             return;
@@ -33,4 +32,5 @@ public class BST extends INode {
         System.out.print(node.data + " -> ");
         printBST(node.right);
     }
+
 }

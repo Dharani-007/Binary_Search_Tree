@@ -1,2 +1,8 @@
-package PACKAGE_NAME;public class INode {
+public class INode {
+
+     //1. Declaring the variables that are used as left node,right node,root node
+
+    int data;
+    INode left;
+    INode right;
 }
